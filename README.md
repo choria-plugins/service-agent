@@ -27,6 +27,27 @@ mcollective_agent_service::config:
   puppet.hasrestart: true
 ```
 
+## Authorization
+
+By default the Action Policy system is configured to only allow `status` action for all users.
+This is a read only action and does not expose secrets.
+
+Follow the Choria documentation to configure your own policies either site wide or per agent.
+
+If you do configure any Policies specific to this module these defaults will be overriden
+when done using Hiera.
+
+An example policy can be seen here:
+
+```yaml
+mcollective_agent_service::policies:
+  - action: "allow"
+    callers: "choria=manager.mcollective"
+    actions: "*"
+    facts: "*"
+    classes: "*"
+```
+
 ## Usage
 
 ```
