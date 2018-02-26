@@ -1,16 +1,16 @@
-# Service Agent
+# Choria Service Agent
 
 The service agent that lets you stop, start, restart and query the statuses of services on your operating system.
 
 The service agent does not do any management of services itself. Instead it
-uses the functionality defined in MCollective::Util::Service classes to
+uses the functionality defined in `MCollective::Util::Service` classes to
 perform the actions. By default the Service agent ships with a PuppetService
 util class, but creating your own is as simple as adding a new class to
 util/service/ and implementing the start, stop, status and restart methods.
 
 ## Installation
 
-Follow the [basic plugin install guide](http://projects.puppetlabs.com/projects/mcollective-plugins/wiki/InstalingPlugins).
+This agent is installed by default as part of the [Choria Orchestrator](https://choria.io).
 
 ## Configuration
 
@@ -20,16 +20,15 @@ There is one plugin configuration setting for the service agent.
 
 General provider configuration options can then also be set in the config file.
 
-```
-plugin.service.provider = puppet
-
-# Puppet provider specific options
-plugin.service.puppet.hasstatus = true
-plugin.service.puppet.hasrestart = true
-
+```yaml
+mcollective_agent_service::config:
+  provider: puppet
+  puppet.hasstatus: true
+  puppet.hasrestart: true
 ```
 
 ## Usage
+
 ```
 % mco rpc service status service=httpd -W /dev_server/
 Determining the amount of hosts matching filter for 2 seconds .... 4
@@ -95,22 +94,16 @@ contributed; it can be configured to work with any command that responds to
 `mycommand myservice start/stop/restart/status`.
 
 The logic for the Puppet version of this agent is implemented in
-Util::Service::PuppetService, you can create a custom service implementation
+`Util::Service::PuppetService`, you can create a custom service implementation
 that overrides #start, #stop, #restart, and #status.
 
 To provide compatibility with the service data plugin #status should return
 'stopped' if the service is stopped, and 'running' if the service is running.
 
-This agent defaults to Util::Service::PuppetService but if you have your own
+This agent defaults to `Util::Service::PuppetService` but if you have your own
 you can configure it in the config file using:
 
+```yaml
+mcollective_agent_service::config:
+  provider: puppet
 ```
-plugin.service.provider = puppet
-```
-
-## Maintenance
-
-Maintainers: Alessandro Parisi <alessandro@puppet.com>, Michael Smith
-<michael.smith@puppet.com>, Michal Ruzicka <michal.ruzicka@puppet.com>.
-
-Tickets: File bug tickets at https://tickets.puppet.com/browse/MCOP.

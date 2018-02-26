@@ -1,9 +1,9 @@
 metadata    :name        => "service",
-            :description => "Start and stop system services",
-            :author      => "R.I.Pienaar",
-            :license     => "ASL 2.0",
+            :description => "Manages Operating System Services",
+            :author      => "R.I.Pienaar <rip@devco.net>",
+            :license     => "Apache-2.0",
             :version     => "3.2.0",
-            :url         => "https://github.com/puppetlabs/mcollective-service-agent",
+            :url         => "https://github.com/choria-plugins/service-agent",
             :timeout     => 60
 
 requires :mcollective => "2.2.1"
