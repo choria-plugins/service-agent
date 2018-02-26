@@ -1,9 +1,9 @@
 metadata :name => "service",
          :description => "Checks the status of a service",
-         :author => "Pieter Loubser <pieter.loubser@puppetlabs.com>",
-         :license => "ASL 2.0",
-         :version => "2.0.1",
-         :url => "http://projects.puppetlabs.com/projects/mcollective-plugins/wiki",
+         :author      => "R.I.Pienaar <rip@devco.net>",
+         :license     => "Apache-2.0",
+         :version     => "3.2.0",
+         :url         => "https://github.com/choria-plugins/service-agent",
          :timeout => 3
 
 requires :mcollective => "2.2.1"

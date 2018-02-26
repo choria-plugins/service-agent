@@ -1,9 +1,9 @@
 metadata :name => "service_name",
          :description => "Validates that a string is a service name",
-         :author => "P. Loubser <pieter.loubser@puppetlabs.com>",
-         :license => "ASL 2.0",
-         :version => "1.0.0",
-         :url => "http://projects.puppetlabs.com/projects/mcollective-plugins/wiki",
+         :author      => "R.I.Pienaar <rip@devco.net>",
+         :license     => "Apache-2.0",
+         :version     => "3.2.0",
+         :url         => "https://github.com/choria-plugins/service-agent",
          :timeout => 1
 
 requires :mcollective => "2.2.1"
