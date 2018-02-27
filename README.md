@@ -2,11 +2,10 @@
 
 The service agent that lets you stop, start, restart and query the statuses of services on your operating system.
 
-The service agent does not do any management of services itself. Instead it
-uses the functionality defined in `MCollective::Util::Service` classes to
-perform the actions. By default the Service agent ships with a PuppetService
-util class, but creating your own is as simple as adding a new class to
-util/service/ and implementing the start, stop, status and restart methods.
+This agent can be extended to support different Service managers, by default it
+uses Puppet.  See the section later in this document about extendibility.
+
+<!--- actions -->
 
 ## Installation
 

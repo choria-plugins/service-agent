@@ -1,6 +1,13 @@
 # Changelog
 
-Change history for mcollective-service.
+Change history for `choria/mcollective_agent_service`
+
+## 4.0.0
+
+Released 2018-02-27
+
+ * Allow `status` action by default (1)
+ * Fork from Puppet Inc
 
 ## 3.2.0
 
