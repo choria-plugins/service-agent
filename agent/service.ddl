@@ -2,7 +2,7 @@ metadata    :name        => "service",
             :description => "Manages Operating System Services",
             :author      => "R.I.Pienaar <rip@devco.net>",
             :license     => "Apache-2.0",
-            :version     => "4.0.0",
+            :version     => "4.0.1",
             :url         => "https://github.com/choria-plugins/service-agent",
             :timeout     => 60
 
