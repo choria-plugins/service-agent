@@ -17,9 +17,9 @@ module MCollective
           Service_nameValidator.validate('rspec:service')
         end
         it 'should fail on a invalid service name' do
-          expect{
+          lambda {
             Service_nameValidator.validate('rspec!')
-          }.to raise_error
+          }.should raise_error(RuntimeError, 'rspec! is not a valid service name')
         end
       end
     end

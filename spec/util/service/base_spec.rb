@@ -17,33 +17,33 @@ module MCollective
 
         describe "#start" do
           it 'should fail to start' do
-            expect{
+            lambda {
               base.start
-            }.to raise_error("error. MCollective::Util::Service::Base Does not implement #start")
+            }.should raise_error(RuntimeError, "error. MCollective::Util::Service::Base Does not implement #start")
           end
         end
 
         describe "#stop" do
           it 'should fail to stop' do
-            expect{
+            lambda {
               base.stop
-            }.to raise_error("error. MCollective::Util::Service::Base Does not implement #stop")
+            }.should raise_error(RuntimeError, "error. MCollective::Util::Service::Base Does not implement #stop")
           end
         end
 
         describe "#restart" do
            it 'should fail to restart' do
-            expect{
+            lambda {
               base.restart
-            }.to raise_error("error. MCollective::Util::Service::Base Does not implement #restart")
+            }.should raise_error(RuntimeError, "error. MCollective::Util::Service::Base Does not implement #restart")
           end
         end
 
         describe "#status" do
            it 'should fail to display status' do
-            expect{
+            lambda {
               base.status
-            }.to raise_error("error. MCollective::Util::Service::Base Does not implement #status")
+            }.should raise_error(RuntimeError, "error. MCollective::Util::Service::Base Does not implement #status")
           end
         end
       end
