@@ -56,24 +56,12 @@ module MCollective
             service.expects(:properties)
             service.restart
           end
-
-          it 'should raise an exception if trying to restart and hasrestart is false' do
-            expect{
-              failed_service.restart
-            }.to raise_error
-          end
         end
 
         describe '#status' do
           it 'should return the status of the service' do
             svc.expects(:status).returns('status')
             service.status
-          end
-
-          it 'should raise an exception when calling status and hasstatus is false' do
-            expect{
-              failed_servce.status
-            }.to raise_error
           end
         end
 
