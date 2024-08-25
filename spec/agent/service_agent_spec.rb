@@ -1,15 +1,15 @@
 #!/usr/bin/env rspec
 
 require 'spec_helper'
-require File.join(File.dirname(__FILE__), '../../', 'agent', 'service.rb')
-require File.join(File.dirname(__FILE__), '../../', 'util', 'service', 'base.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'agent', 'service.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'util', 'service', 'base.rb')
 
 module MCollective
   module Agent
     describe Service do
 
       before do
-        agent_file = File.join(File.dirname(__FILE__), '../../', 'agent', 'service.rb')
+        agent_file = File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'agent', 'service.rb')
         @agent = MCollective::Test::LocalAgentTest.new('service', :agent_file => agent_file).plugin
       end
 

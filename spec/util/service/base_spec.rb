@@ -1,7 +1,7 @@
 #!/usr/bin/evn rspec
 
 require 'spec_helper'
-require File.join(File.dirname(__FILE__), '../../../', 'util', 'service', 'base.rb')
+require File.join(File.dirname(__FILE__), '../../../',  'files', 'mcollective', 'util', 'service', 'base.rb')
 
 module MCollective
   module Util

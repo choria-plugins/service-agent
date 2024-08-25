@@ -1,7 +1,7 @@
 #!/usr/bin/env rspec
 
 require 'spec_helper'
-require File.join(File.dirname(__FILE__), '../../', 'validator', 'service_name.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'validator', 'service_name.rb')
 
 module MCollective
   module Validator
