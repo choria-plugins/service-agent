@@ -99,9 +99,9 @@ module MCollective
 
         it 'should fail if the provider cannot be loaded' do
           PluginManager.expects(:loadclass).with('MCollective::Util::Service::PuppetService').raises(LoadError)
-          expect{
+          lambda {
             Service.do_service_action('restart', 'rspec')
-          }.to raise_error(/Cannot load service provider/)
+          }.should raise_error(RuntimeError, /Cannot load service provider/)
         end
       end
     end
