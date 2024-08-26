@@ -2,7 +2,7 @@ metadata :name => "service",
          :description => "Checks the status of a service",
          :author      => "R.I.Pienaar <rip@devco.net>",
          :license     => "Apache-2.0",
-         :version     => "4.0.1",
+         :version     => "4.1.0",
          :url         => "https://github.com/choria-plugins/service-agent",
          :timeout => 3
 
