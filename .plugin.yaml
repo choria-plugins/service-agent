@@ -1,6 +1,0 @@
-mcollective_agent_service::policies:
-  - action: "allow"
-    callers: "*"
-    actions: "status"
-    facts: "*"
-    classes: "*"

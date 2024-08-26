@@ -1,8 +1,8 @@
 #!/usr/bin/env rspec
 
 require 'spec_helper'
-require File.join(File.dirname(__FILE__), '../../', 'data', 'service_data.rb')
-require File.join(File.dirname(__FILE__), '../../', 'agent', 'service.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'data', 'service_data.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'agent', 'service.rb')
 
 module MCollective
   module Data

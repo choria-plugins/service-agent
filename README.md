@@ -5,7 +5,14 @@ The service agent that lets you stop, start, restart and query the statuses of s
 This agent can be extended to support different Service managers, by default it
 uses Puppet.  See the section later in this document about extendibility.
 
-<!--- actions -->
+## Actions
+
+This agent provides the following actions, for details about each please run `mco plugin doc agent/service`
+
+ * **restart** - Restart a service
+ * **start** - Start a service
+ * **status** - Gets the status of a service
+ * **stop** - Stop a service
 
 ## Installation
 
